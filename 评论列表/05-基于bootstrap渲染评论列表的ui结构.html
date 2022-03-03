@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <script src="./jQuery-mini.js"></script>
+    <script src="./bootstrap.min.js"></script>
+    <script src="./cm.js"></script>
+</head>
+<body>
+    <!-- 评论面板 -->
+    <div class="panel panel-primary" style="margin: 20px;">
+          <div class="panel-heading">
+                <h3 class="panel-title">Panel title</h3>
+          </div>
+          <form class="panel-body" id="two">
+                <div>评论人：</div>
+                <input type="text" class="form-control" name="username"/>
+                <div>评论内容:</div>
+                <textarea class="form-control" name="content"></textarea>
+                <button type="submit" class="btn btn-primary">发表评论</button>
+          </form>
+    </div>
+
+    <!-- 评论列表 -->
+    
+    <ul class="list-group" style="margin: 20px;" id="one">
+        <li class="list-group-item">
+            <span class="badge" style="background-color: aqua;">评论时间:</span>
+            <span class="badge" style="background-color:lightcoral;">评论人:</span>
+            Item 1
+        </li>
+        <li class="list-group-item">
+            <span class="badge" style="background-color: aqua;">评论时间:</span>
+            <span class="badge" style="background-color:lightcoral;">评论人:</span>
+            Item 2
+        </li>
+        <li class="list-group-item">
+            <span class="badge" style="background-color: aqua;">评论时间:</span>
+            <span class="badge" style="background-color:lightcoral;">评论人:</span>
+            Item 3
+        </li>
+    </ul>
+    
+</body>
+</html>
