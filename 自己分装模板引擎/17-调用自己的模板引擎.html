@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="./jQuery-mini.js"></script> -->
+    <!-- <script src="./template-web.js"></script> -->
+    <script src="./17-01-自己封装的模板引擎.js"></script>
+</head>
+<body>
+    <div id="two"></div>
+    <script type="text/html" id="one">
+        <div>姓名：{{name}}</div>
+        <div>年龄：{{age}}</div>
+        <div>性别：{{gender}}</div>
+        <div>地址：{{address}}</div>
+    </script>
+    <script>
+        var data = {name:'小胖',age:90,gender:'男',address:'南京栖霞区'
+        }
+
+        var htmlStr = template('one',data)
+
+        document.getElementById('two').innerHTML = htmlStr
+    </script>
+</body>
+</html>
