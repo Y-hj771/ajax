@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 1.引入引擎模板 -->
+    <script src="./template-web.js"></script>
+    <script src="./jQuery-mini.js"></script>
+</head>
+<body>
+    <div id="box"></div>
+
+    <!-- 3.定义模板 -->
+    <script type="text/html" id="one">
+        <h3>{{regTime | dateFormat}}</h3>
+    </script>
+
+    <!-- 2.定义需要渲染的数据 -->
+    <script>
+        var data = {regTime: new Date()}
+
+        template.defaults.imports.dateFormat = function(date){
+            var y = date.getFullYear()
+            var m = date.getMonth()+1
+            var d = date.getDate()
+            return y + '-' + m + '-' + d
+        }
+        // 4.调用template函数
+        var str = template('one',data)
+
+        // 5.渲染html函数
+        $('#box').html(str)   
+    </script>
+</body>
+</html>
