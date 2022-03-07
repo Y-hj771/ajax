@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = '月薪过万'
+        var str1 = encodeURI(str)
+        // console.log(str1);
+        var str2 = '%E6%9C%88%E8%96%AA'
+        var str3 = decodeURI(str2)
+        console.log(str3);
+    </script>
+</body>
+</html>
